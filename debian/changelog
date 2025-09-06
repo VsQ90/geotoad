@@ -1,3 +1,19 @@
+geotoad (3.34.2-1) unstable; urgency=low
+
+  * New version 3.34.2, "First bug in 2025"
+  * Fix issue 372: File.exists?() has been deprecated since Ruby 2.2
+  * Minimum Ruby version bumped to 1.9.3 (although obsolete)
+  * Attempt to address issue 375: with still inconsistent results
+  * Address issue 377: distanceMax is not string value (Ruby 3.3+)
+  * Refactoring: constants, mapping, coordinate parsing
+  * Disabled: gallery support
+  * Incomplete rewrite: bookmark support (not ready for use)
+  * Some minor stuff: Handling of moved cache, "cactus" and "landf"
+  * Copyright extended to 2025
+  * ATTENTION: Item numbering in TUI has changed in 3.34.0!
+
+ -- Steve Sixty-Four <steve8x8@googlemail.com>  Sat, 06 Sep 2025 18:00:00 +0000
+
 geotoad (3.34.1-1) unstable; urgency=low
 
   * New version 3.34.1, "Spring springs springing (and geotoads watching)"

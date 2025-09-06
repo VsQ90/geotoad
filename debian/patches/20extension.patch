@@ -9,7 +9,19 @@
      hidden_opts = ['queryArg', 'user', 'password', 'usemetric', 'verbose']
      # hide unlimited search
      if @@optHash['limitSearchPages'] == 0
-@@ -280,7 +280,7 @@
+@@ -235,9 +235,9 @@
+     end
+ 
+     if    @@optHash['clearCache']
+-      cmdline = "geotoad.rb -C"
++      cmdline = "geotoad -C"
+     elsif @@optHash['version']
+-      cmdline = "geotoad.rb -V"
++      cmdline = "geotoad -V"
+     else
+       cmdline = createcmdline
+     end
+@@ -286,7 +286,7 @@
  
  
    def usage
@@ -18,7 +30,7 @@
      puts ""
      puts " -u <username>          Geocaching.com username, required for coordinates"
      puts " -p <password>          Geocaching.com password, required for coordinates"
-@@ -349,12 +349,12 @@
+@@ -355,12 +355,12 @@
      puts " (+) requires gpsbabel  (=) requires cmconvert  (%) requires iconv in PATH"
      puts ""
      puts "::: EXAMPLES:"
