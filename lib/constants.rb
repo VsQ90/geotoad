@@ -124,6 +124,7 @@ $CacheTypes = {
 	'earth'		=> 'EarthCache',
 	'earthcache'	=> 'EarthCache',
 	'event'		=> 'Event Cache',
+	'landf'		=> 'Geocaching HQ',
 	'gshq'		=> 'Geocaching HQ',
 	'gchq'		=> 'Geocaching HQ',
 	'gchqceleb'	=> 'Geocaching HQ Celebration',
