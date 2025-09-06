@@ -391,13 +391,15 @@ class CacheDetails
           else
             debug "last resort lat/lon for #{wid}"
           end
-          if ( oldlat and oldlon ) and
-             ( ( (newlat.to_f - oldlat.to_f).abs + (newlon.to_f - oldlon.to_f).abs ) > 0.00001 )
-            # cache has moved, description and hint may be inaccurate - set mark
+          if ( oldlat and oldlon )
+#             and ( ( (newlat.to_f - oldlat.to_f).abs + (newlon.to_f - oldlon.to_f).abs ) > 0.00001 )
+            # check whether cache has moved, description and hint may be inaccurate - set mark
             movedDistance, movedDirection = geoDistDir(oldlat, oldlon, newlat, newlon)
             movedDistance = (movedDistance.to_f * 1000 * $MILE2KM).round
-            debug "Moved from #{oldlat}/#{oldlon} to #{newlat}/#{newlon} (#{movedDistance}m@#{movedDirection})"
-            cache['moved'] = true
+            if (movedDistance >= 5)
+              debug "Moved from #{oldlat}/#{oldlon} to #{newlat}/#{newlon} (#{movedDistance}m@#{movedDirection})"
+              cache['moved'] = true
+            end
           end
         end
       end
