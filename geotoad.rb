@@ -183,7 +183,7 @@ class GeoToad
     if @distanceMax == 0.0
       @distanceMax = 10
     end
-    if @option['distanceMax'] =~ /(mi|km)/
+    if @option['distanceMax'].to_s =~ /(mi|km)/
       @useMetric     = ($1 == "km" || nil)
       # else leave usemetric unchanged
     end
